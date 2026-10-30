@@ -1,4 +1,8 @@
-﻿<div align="center">
+> **Esta não é a versão completa da Logic Synap Hub.**
+>
+> Este repositório contém apenas uma demonstração pública do frontend, com dados fictícios e operações simuladas. A plataforma completa já possui backend, inteligência artificial e integrações; esses serviços e workflows não estão incluídos integralmente nesta publicação.
+
+<div align="center">
   <img src="public/logo_synap/logic_synap_logo.svg" alt="Logótipo Logic Synap" width="76" />
 
   <h1>Logic Synap Atendant</h1>
@@ -8,9 +12,7 @@
 
 ---
 
-> **Versão pública de demonstração — projeto em desenvolvimento.**
->
-> Esta versão executa apenas o frontend, com dados fictícios e operações simuladas. Permite explorar a interface sem configurar backend, inteligência artificial ou contas de serviços externos.
+
 
 ## Sobre o projeto
 
@@ -61,15 +63,41 @@ O login apresenta um cartão com as limitações da versão. Durante a navegaç�
 
 A sessão e as alterações ficam no navegador durante a sessão do separador. Os ficheiros escolhidos não são enviados para um servidor: o conteúdo fica em memória até recarregar a página; depois disso, a abertura apresenta um exemplo explicativo.
 
-## Tecnologias
+## Tecnologias utilizadas
 
+### Frontend incluído neste repositório
+
+- **JavaScript e TypeScript** para o código da interface, ferramentas e funções de integração.
 - **React 19** e **React Router 7** para a interface e a navegação.
-- **Vite 8** para desenvolvimento e compilação.
+- **Vite 8**, **Node.js** e **npm** para desenvolvimento, dependências e compilação.
 - **CSS Modules** para estilos dos componentes.
 - **Lucide React** para ícones.
 - **React Markdown**, **remark** e **KaTeX** para apresentação de mensagens.
 - **Supabase JS** para a ligação opcional ao backend de uma instalação configurada.
 - **Docker e Nginx** para servir os ficheiros compilados.
+
+### Tecnologias já utilizadas na versão completa
+
+A plataforma completa já utiliza backend, inteligência artificial, armazenamento e automações. A lista abaixo descreve essa arquitetura existente; os serviços externos e os workflows completos não acompanham esta demonstração pública.
+
+| Tecnologia | Função na plataforma completa |
+| --- | --- |
+| **Supabase / PostgreSQL** | Persistência dos dados de empresas, documentos, conversas, mensagens e agendamentos. |
+| **Supabase Auth e JWT** | Autenticação dos utilizadores e identificação das sessões nos pedidos ao backend. |
+| **Row Level Security (RLS)** | Políticas de acesso e isolamento dos dados entre empresas. |
+| **Supabase Realtime** | Atualizações de dados na interface, complementadas por atualização manual e consultas periódicas. |
+| **Supabase Edge Functions, Deno e TypeScript** | Funções de backend, incluindo autorização e geração de acesso temporário a documentos. |
+| **n8n e webhooks** | Orquestração dos workflows de documentos, chat, atendimento e operações administrativas. |
+| **Google Gemini API** | Geração de respostas contextualizadas, processamento multimodal e criação de embeddings para o conhecimento empresarial. |
+| **Google Cloud Storage (GCS)** | Armazenamento privado de documentos e arquivos, com acesso temporário através de URLs assinadas. |
+| **Meta WhatsApp Cloud API** | Integração oficial do WhatsApp Business para receção e envio de mensagens. |
+| **Gmail API e Google OAuth 2.0** | Autorização de contas de e-mail, leitura de mensagens, envio e acesso a anexos. |
+| **Docker, Docker Compose e Nginx** | Compilação, distribuição e disponibilização do frontend. |
+| **VPS Hostinger e EasyPanel** | Alojamento e gestão operacional dos serviços da plataforma. |
+
+O processamento documental da versão completa inclui extração de texto e tratamento de documentos digitalizados, com OCR quando necessário. A base de conhecimento utiliza **RAG (Retrieval-Augmented Generation)**, divisão do conteúdo em **chunks**, **embeddings** e **recuperação semântica** para fornecer contexto às respostas do assistente.
+
+Na demonstração deste repositório, estas operações são simuladas localmente. Os detalhes de configuração, as credenciais e os endpoints da instalação real não são publicados.
 
 ## Estrutura do projeto
 
