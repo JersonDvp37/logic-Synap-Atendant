@@ -1,0 +1,1211 @@
+.root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  padding: 20px 32px 28px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 14px;
+}
+
+.pageHeader h2 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.pageHeader p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.sectionHeading {
+  min-width: 0;
+}
+
+.sectionTitle {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.sectionHeading p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.gmailLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
+}
+
+.gmailContent {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.tabSidebar {
+  display: none;
+}
+
+.tabSidebar {
+  position: sticky;
+  top: 16px;
+  align-self: start;
+}
+
+.tabNavSidebar {
+  display: grid;
+  gap: 4px;
+  padding: 4px;
+  border: 0px ;
+  border-radius: 9px;
+  border: 0px ;
+  background: var(--card);
+}
+
+.tabNavSidebar,
+.tabNavSidebar a {
+  border: 0px;
+}
+
+.tabItem,
+.tabActive {
+  display: inline-flex;
+  width: 100%;
+  min-height: 36px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 0 10px;
+  color: var(--muted);
+  border: 0px ;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 11px;
+  opacity: .7;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tabItem:hover {
+  color: var(--text);
+  background: var(--card2);
+  opacity: 1;
+}
+
+.tabActive {
+  color: var(--accent);
+  border: 0px ;
+  border-color: rgba(148, 163, 184, .18);
+  background: #2f7df617;
+  opacity: 1;
+}
+
+.sectionAction {
+  display: flex;
+  flex-shrink: 0;
+  border: 0px ;
+}
+
+.panel {
+  min-width: 0;
+  overflow: hidden;
+  border: 0px solid var(--line);
+  border-radius: 11px;
+  background:  var(--card) ;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+  margin-top: -10px;
+}
+
+.secondaryButton,
+.btnRefresh,
+.primaryButton,
+.openButton {
+  display: inline-flex;
+  min-height: 37px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 12px;
+  border-radius: 7px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.secondaryButton,
+.btnRefresh,
+.openButton {
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: transparent;
+}
+
+.primaryButton {
+  color: #fff;
+  border: 0;
+  background: var(--accent);
+}
+
+.secondaryButton:disabled,
+.btnRefresh:disabled,
+.primaryButton:disabled,
+.openButton:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 10px 13px;
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, .25);
+  border-radius: 8px;
+  background: rgba(239, 68, 68, .08);
+  font-size: 12px;
+}
+
+.emailListContainer {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  height: calc(98dvh - 115px);
+  min-height: 220px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 12px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.inboxToolbar {
+  position: sticky;
+  z-index: 1;
+  top: -12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: -12px 0 2px;
+  padding: 10px 0px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(to bottom, var(--card) 0%, var(--card) 30%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(6px);
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+  height: 36px;
+  padding: 0 12px;
+  border: 0px ;
+  border-radius: 10px;
+  outline: 0;
+  background-color: var(--card2);
+  color: var(--text);
+  font-size: 13px;
+}
+
+.subjectInput {
+  width: 200px;
+  height: 36px;
+  padding: 0 12px;
+  border: 0px ;
+  border-radius: 10px;
+  outline: 0;
+  background-color: var(--card2);
+  color: var(--text);
+  font-size: 13px;
+}
+
+.searchInput:focus,
+.subjectInput:focus {
+  border: 1px solid var(--line);
+  border-color: var(--accent);
+}
+
+.btnFilterIcon,
+.btnRefreshIcon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: var(--card2);
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnFilterIcon:hover,
+.btnRefreshIcon:hover {
+  background-color: var(--line);
+}
+
+.filterActive {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.panel {
+  width: 100%;
+  max-width: 100%;
+}
+
+.btnRefreshIcon:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.messageCard {
+  display: grid;
+  align-self: start;
+  align-content: start;
+  width: 100%;
+  min-width: 0;
+  gap: 6px;
+  padding: 12px 16px;
+  color: var(--text);
+  border: 1px solid var(--card2);
+  border-radius: 9px;
+  background: var(--card);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease, transform .15s ease;
+}
+
+.messageUnread {
+  background: var(--card2);
+}
+
+.messageRead {
+  background: var(--card);
+}
+
+.messageCard:hover {
+  border-color: var(--accent);
+  background: var(--card);
+  transform: translateY(-1px);
+}
+
+.messageUnread:hover {
+  background: var(--card2);
+}
+
+.messageCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.senderBlock {
+  display: flex;
+  min-width: 0;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.senderBlock strong {
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.senderBlock span {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.messageSnippet {
+  max-width: 90%;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.messageMeta {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.messageMeta time {
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.messageSubject {
+  margin: 0;
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.messageSnippet {
+  display: block;
+}
+
+.empty {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  padding: 30px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.empty strong {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.compose {
+  display: grid;
+  gap: 15px;
+  padding: 22px;
+}
+
+.compose label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.compose input,
+.compose textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 12px 13px;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: 0;
+  background: var(--card2);
+  font: inherit;
+  font-size: 13px;
+}
+
+.compose input:focus,
+.compose textarea:focus {
+  border-color: var(--accent);
+}
+
+.composeFooter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.success,
+.error {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.success {
+  color: #36c98a;
+}
+
+.error {
+  color: #f87171;
+}
+
+.modalBackdrop {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(2, 6, 23, .72);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: min(720px, 100%);
+  max-height: 85vh;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .35);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-shrink: 0;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.modalSender {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 11px;
+}
+
+.modalSender>div:last-child {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.modalSender strong,
+.modalSender span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.modalSender strong {
+  font-size: 13px;
+}
+
+.modalSender span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.avatar {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  place-items: center;
+  color: #fff;
+  border-radius: 50%;
+  background: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.iconButton {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  place-items: center;
+  color: var(--muted);
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.iconButton:hover {
+  color: var(--text);
+  background: var(--card2);
+}
+
+.modalSubjectRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-shrink: 0;
+  padding: 18px 20px 12px;
+}
+
+.modalSubjectRow h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.modalSubjectRow time {
+  flex-shrink: 0;
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.modalBody {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 8px 8px 20px 20px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.modalBody::-webkit-scrollbar,
+.emailListContainer::-webkit-scrollbar {
+  width: 7px;
+}
+
+.modalBody::-webkit-scrollbar-track,
+.emailListContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modalBody::-webkit-scrollbar-thumb,
+.emailListContainer::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(148, 163, 184, .35);
+}
+
+.modalBody::-webkit-scrollbar-thumb:hover,
+.emailListContainer::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, .55);
+}
+
+.richMessageBody {
+  overflow-wrap: anywhere;
+}
+
+.richMessageBody img {
+  max-width: 100%;
+  height: auto;
+}
+
+.plainMessageBody {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.attachmentsSection {
+  flex-shrink: 0;
+  padding: 15px 20px;
+  border-top: 1px solid var(--line);
+}
+
+.attachmentsSection h4 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.attachmentList {
+  display: grid;
+  gap: 8px;
+}
+
+.attachmentItem {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+
+.attachmentItem>span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attachmentItem .openButton {
+  margin-left: auto;
+  min-height: 30px;
+}
+
+.modalFooter {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--line);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+th {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+td {
+  color: var(--muted);
+}
+
+td strong {
+  color: var(--text);
+}
+
+.fileName {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--accent);
+}
+
+.fileName strong {
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tableWrap a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.tableWrap a:hover {
+  text-decoration: underline;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.openButton {
+  min-height: 32px;
+  white-space: nowrap;
+}
+
+.spinner {
+  animation: spin .8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .root {
+    padding: 14px 16px 20px;
+  }
+
+  .gmailLayout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tabSidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .tabNavSidebar {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .sectionHeader {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .sectionHeading {
+    flex: 1;
+  }
+
+  .tabItem,
+  .tabActive {
+    width: auto;
+    flex: 0 0 auto;
+    justify-content: center;
+  }
+
+  .pageHeader {
+    align-items: flex-start;
+  }
+
+  .messageCardHeader,
+  .modalSubjectRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .senderBlock {
+    flex: 1;
+  }
+
+  .messageMeta {
+    justify-content: space-between;
+  }
+
+  .modalBackdrop {
+    padding: 12px;
+  }
+
+  .modal {
+    max-height: calc(100vh - 24px);
+  }
+
+  .modalHeader,
+  .modalSubjectRow,
+  .modalBody,
+  .attachmentsSection,
+  .modalFooter {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .attachmentItem {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .attachmentItem .openButton {
+    margin-left: 25px;
+  }
+
+  .compose {
+    padding: 16px;
+  }
+
+  .emailListContainer {
+    height: min(640px, calc(100dvh - 150px));
+    min-height: 180px;
+    padding: 8px;
+  }
+
+  .inboxToolbar {
+    width: 100%;
+    min-width: 0;
+    top: -8px;
+    margin: -8px 0 2px;
+    padding: 10px 12px;
+    flex-wrap: nowrap;
+  }
+
+  .accountPicker {
+    display: none;
+  }
+
+  .inboxToolbar.filterMode .searchInput {
+    display: none;
+  }
+
+  .searchInput,
+  .subjectInput {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+  }
+
+  .btnFilterIcon,
+  .btnRefreshIcon {
+    flex: 0 0 40px;
+  }
+
+  .messageCard,
+  .messageCardHeader,
+  .messageSubject,
+  .messageSnippet {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .messageMeta {
+    min-width: 0;
+    max-width: 42%;
+  }
+
+  .messageMeta time {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .senderBlock span {
+    display: none;
+  }
+
+  .emailListContainer {
+    height: calc(97.5dvh - 115px) !important;
+    min-height: 240px !important;
+  }
+
+  .subjectInput {
+    flex: 1;
+    width: min(200px, 32vw);
+  }
+
+  th,
+  td {
+    padding: 11px 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .root {
+    padding-inline: 12px;
+  }
+
+  .tabNavSidebar {
+    padding: 3px;
+  }
+
+  .tabItem,
+  .tabActive {
+    min-height: 34px;
+    padding-inline: 9px;
+    font-size: 10px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 12px;
+  }
+  /* .emailListContainer {
+    height: calc(100dvh - 115px) !important;
+    min-height: 00px !important;
+  } */
+
+  .messageCard {
+    padding: 11px 12px;
+  }
+
+  .inboxToolbar {
+    align-items: center;
+  }
+
+  .searchInput {
+    flex-basis: auto;
+  }
+
+  .subjectInput {
+    flex: 1;
+    width: auto;
+  }
+}
+
+/* CRM surface refinements */
+.root {
+  padding: 22px 32px 32px;
+}
+
+.panel,
+.tabNavSidebar {
+  border-color: color-mix(in srgb, var(--line) 86%, transparent);
+  border-radius: 16px;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, .06);
+}
+
+.tabNavSidebar {
+  padding: 6px;
+}
+
+.tabItem,
+.tabActive {
+  min-height: 40px;
+  border-radius: 10px;
+  font-weight: 650;
+}
+
+.inboxToolbar {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--card) 96%, var(--bg));
+}
+
+.searchInput,
+.subjectInput {
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.btnFilterIcon,
+.btnRefreshIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.messageCard {
+  gap: 8px;
+  padding: 14px 16px;
+  border-color: color-mix(in srgb, var(--line) 82%, transparent);
+  border-radius: 12px;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.messageCard:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, .06);
+}
+
+.messageSubject {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.compose,
+.modal {
+  border-radius: 16px;
+}
+
+.compose input,
+.compose textarea {
+  min-height: 42px;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .root {
+    padding: 16px;
+  }
+
+  .inboxToolbar {
+    gap: 8px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .root {
+    padding: 12px;
+  }
+
+  .messageCard {
+    padding: 12px;
+  }
+}
+
+.senderAvatar {
+  display: inline-grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 18%, var(--card2));
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+.senderBlock {
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .senderAvatar {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+}
+
+.accountSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(100%, 620px);
+  margin: 12px 12px 0;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card2);
+}
+
+.accountSwitcher span {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.accountSelect {
+  min-width: 0;
+  flex: 1;
+  height: 32px;
+  padding: 0 30px 0 10px;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: 0;
+  background: var(--card);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.accountSelect:focus {
+  border-color: var(--accent);
+}
+
+@media (max-width: 520px) {
+  .accountSwitcher {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 6px;
+    width: auto;
+  }
+}
+
+.accountPicker {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.accountPickerButton {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card2);
+  cursor: pointer;
+}
+
+.accountPickerButton:hover,
+.accountPickerButton[aria-expanded='true'] {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.accountPopover {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 8px);
+  left: 0;
+  display: grid;
+  width: 250px;
+  gap: 7px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .16);
+}
+
+.accountPopover label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.accountPopover .accountSelect {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .root,
+  .gmailLayout,
+  .gmailContent,
+  .panel,
+  .emailListContainer {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .root {
+    overflow-x: clip;
+    padding-inline: 16px;
+  }
+
+  .accountPicker {
+    display: none;
+  }
+
+  .inboxToolbar {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: nowrap;
+  }
+
+  .searchInput,
+  .subjectInput {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+  }
+
+  .btnFilterIcon,
+  .btnRefreshIcon {
+    flex: 0 0 40px;
+  }
+
+  .messageCard,
+  .messageCardHeader,
+  .messageSubject,
+  .messageSnippet {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .messageMeta {
+    min-width: 0;
+    max-width: 42%;
+  }
+
+  .messageMeta time {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

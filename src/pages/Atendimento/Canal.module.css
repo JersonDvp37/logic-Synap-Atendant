@@ -1,0 +1,125 @@
+.root{width:min(1120px,100%);margin:auto;display:grid;gap:18px}.statusCard,.formCard{overflow:hidden;border:1px solid var(--line);border-radius:10px;background:var(--card)}.state{display:flex;align-items:center;gap:13px;padding:20px;color:var(--muted)}.state strong{display:block;margin-bottom:4px;color:var(--text);font-size:15px}.state p{font-size:13px}.active{color:#36c98a}.failed{color:#ef6464}.details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:0;border-top:1px solid var(--line);background:var(--line)}.details div{min-width:0;padding:15px 18px;background:var(--card)}.details dt{margin-bottom:6px;color:var(--muted);font-size:11px}.details dd{overflow-wrap:anywhere;margin:0;font-size:13px}.formCard form{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;padding:20px}.tokenField{grid-column:1/-1}.actions{grid-column:1/-1;display:flex;gap:10px}.refresh{display:flex;min-height:43px;align-items:center;gap:7px;padding:0 16px;color:var(--text);border:1px solid var(--line);border-radius:7px;background:var(--card2)}.formCard button:disabled{cursor:not-allowed;opacity:.65}.success,.error{grid-column:1/-1;display:flex;align-items:center;gap:8px;margin-top:15px;padding:11px 13px;border-radius:7px;font-size:13px}.success{color:#36c98a;background:#36c98a14}.error{color:#ef7777;background:#ef646414}.spinner{animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:800px){.details,.formCard form{grid-template-columns:1fr}.tokenField,.actions,.success,.error{grid-column:1}.actions{flex-direction:column}.actions button{width:100%;justify-content:center}}
+.testArea{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:16px 20px;border-top:1px solid var(--line)}.testButton{display:flex;min-height:43px;align-items:center;justify-content:center;gap:7px;padding:0 17px;color:#fff;border:0;border-radius:7px;background:var(--accent)}.testButton:disabled{cursor:not-allowed;opacity:.65}.testArea .success,.testArea .error{margin-top:0}.testHint{padding:0 20px 18px;color:var(--muted);font-size:13px}
+
+.disconnectButton {
+  display: flex;
+  min-height: 43px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 17px;
+  border: 1px solid rgba(239, 100, 100, 0.45);
+  border-radius: 7px;
+  background: transparent;
+  color: #ef7777;
+  cursor: pointer;
+}
+
+.disconnectButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(3px);
+}
+
+.confirmDialog {
+  width: min(100%, 440px);
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.dialogIcon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+}
+
+.confirmDialog h2 { margin: 0; font-size: 18px; }
+.confirmDialog p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.dialogActions { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 10px; }
+.cancelButton, .confirmDisconnectButton { min-height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; border-radius: 7px; cursor: pointer; }
+.cancelButton { border: 1px solid var(--line); background: transparent; color: var(--text); }
+.confirmDisconnectButton { border: 0; background: #dc3d3d; color: #fff; }
+.cancelButton:disabled, .confirmDisconnectButton:disabled { cursor: not-allowed; opacity: 0.65; }
+
+/* CRM surface refinements */
+.root {
+  width: min(1240px, 100%);
+  padding: 22px 32px 32px;
+}
+
+.statusCard,
+.formCard {
+  border-color: color-mix(in srgb, var(--line) 86%, transparent);
+  border-radius: 16px;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, .06);
+}
+
+.state {
+  min-height: 82px;
+  padding: 20px 22px;
+}
+
+.details div {
+  padding: 17px 20px;
+}
+
+.formCard form {
+  padding: 22px;
+}
+
+.formCard input,
+.formCard textarea,
+.formCard select {
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card2);
+  color: var(--text);
+  outline: none;
+}
+
+.formCard input:focus,
+.formCard textarea:focus,
+.formCard select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.refresh,
+.testButton,
+.disconnectButton {
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .root {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .root {
+    padding: 12px;
+  }
+}

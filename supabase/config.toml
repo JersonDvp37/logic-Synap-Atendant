@@ -1,0 +1,2 @@
+[functions.document-acess]
+verify_jwt = true

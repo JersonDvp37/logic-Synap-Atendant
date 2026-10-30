@@ -1,0 +1,57 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment variables (including staging, production and nested functions)
+.env*
+!.env.example
+
+# Local review material, credentials and operational data
+.private/
+.codex/
+.agents/
+.aws/
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+service-account*.json
+service_account*.json
+credentials*.json
+client_secret*.json
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.bak
+*.sql.gz
+backups/
+dumps/
+
+# Local artifacts and documentation screenshots containing real data
+/Microsoft/
+/temp_css.txt
+/nodesource_setup.sh
+/public/img_documentacao/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,24 @@
+.root { width: min(980px,100%); margin: auto; display: grid; gap: 18px; }
+.pageHeader h1 { margin: 0 0 6px; font-size: 22px; }.pageHeader p { color: var(--muted); font-size: 13px; }
+.tabs { display: flex; gap: 6px; border-bottom: 1px solid var(--line); }.tabs button { display: inline-flex; align-items: center; gap: 7px; padding: 11px 15px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; }.tabs .activeTab { border-bottom-color: var(--accent); color: var(--text); }
+.panel,.dangerZone { padding: 22px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }.panel h2,.dangerZone h2 { margin: 0 0 18px; font-size: 16px; }.panel form,.panel label { display: grid; gap: 8px; }.panel form { gap: 18px; }.panel label { color: var(--muted); font-size: 12px; font-weight: 600; }.twoColumns,.readOnlyGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }.readOnlyGrid { grid-template-columns: repeat(3,1fr); }
+.panel input,.panel textarea,.dialog input { width: 100%; padding: 11px 13px; border: 1px solid var(--line); border-radius: 7px; outline: none; background: var(--card2); color: var(--text); }.panel input:focus,.panel textarea:focus,.dialog input:focus { border-color: var(--accent); }.panel input[readonly] { opacity: .75; }.panel textarea { min-height: 120px; resize: vertical; }.panel small { color: var(--muted); font-weight: 400; }.panel fieldset { margin: 0; padding: 0; border: 0; }.panel legend { margin-bottom: 10px; color: var(--muted); font-size: 12px; font-weight: 600; }.panel legend span { color: var(--accent); }
+.areaGrid { display: flex; flex-wrap: wrap; gap: 7px; }.areaGrid button { padding: 7px 10px; border: 1px solid var(--line); border-radius: 99px; background: var(--card2); color: var(--muted); font-size: 11px; cursor: pointer; }.areaGrid button:disabled { opacity: .45; cursor: not-allowed; }.areaGrid .selectedArea { border-color: var(--accent); color: #80b2ff; background: rgba(47,125,246,.14); }
+.saveButton { min-height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; justify-self: end; padding: 0 18px; border: 0; border-radius: 7px; background: var(--accent); color: #fff; font-weight: 700; cursor: pointer; }.saveButton:disabled { opacity: .7; cursor: not-allowed; }
+.success,.error { padding: 11px 13px; border-radius: 7px; font-size: 12px; }.success { color: #86efac; background: rgba(34,197,94,.08); }.error { color: #fca5a5; background: rgba(239,68,68,.08); }
+.dangerZone { display: flex; align-items: center; justify-content: space-between; gap: 18px; border-color: rgba(239,68,68,.35); }.dangerZone h2 { margin-bottom: 6px; color: #f87171; }.dangerZone p { color: var(--muted); font-size: 12px; }.dangerZone button,.deleteButton { padding: 10px 15px; border: 0; border-radius: 7px; background: #dc3d3d; color: #fff; cursor: pointer; white-space: nowrap; }
+.modalBackdrop { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: 20px; background: rgba(0,0,0,.72); backdrop-filter: blur(3px); }.dialog { width: min(100%,460px); display: grid; justify-items: center; gap: 13px; padding: 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); text-align: center; }.dialog>svg { color: #f87171; }.dialog h2,.dialog p { margin: 0; }.dialog p { color: var(--muted); font-size: 13px; line-height: 1.55; }.dialog code { padding: 8px 11px; border-radius: 6px; background: var(--card2); color: #fca5a5; }.dialogActions { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 8px; }.dialogActions button { min-height: 40px; border: 1px solid var(--line); border-radius: 7px; background: transparent; color: var(--text); cursor: pointer; }.dialogActions .continueButton { border: 0; background: var(--accent); color: #fff; }.dialogActions .deleteButton { border: 0; background: #dc3d3d; color: #fff; }.dialogActions button:disabled { opacity: .5; cursor: not-allowed; }
+.dialog form { width: 100%; display: grid; justify-items: center; gap: 13px; }
+.spinner { animation: spin .8s linear infinite; }@keyframes spin { to { transform:rotate(360deg); } }
+@media(max-width:700px){.twoColumns,.readOnlyGrid{grid-template-columns:1fr}.dangerZone{align-items:flex-start;flex-direction:column}.dangerZone button{width:100%}.saveButton{width:100%}.dialogActions{grid-template-columns:1fr}}
+@media(max-width:480px){.panel,.dangerZone{padding:16px}.dialog{padding:22px 16px}.modalBackdrop{align-items:end;padding:12px}.dialog{border-radius:14px}.pageHeader p{line-height:1.5}}
+.tabs,
+.tabs button,
+.tabs .activeTab {
+  border: 0px;
+}
+
+.tabs .activeTab {
+  color: var(--accent);
+  background: #2f7df617;
+}
